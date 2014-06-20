@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+<head>
+    <title>Shopping List</title>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <link href="bootstrap-theme.css" rel="stylesheet" />
+    <script src="angular.js"></script>
+    <script src="pa2.js"></script>
+
+</head>
+<body ng-controller="ToDoCtrl">
+  <div class="container">
+
+    <div class="page-header">
+         <h1>WUMA <small>Wake Up Motivation App</small></h1>
+    </div>
+    
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Look at me kid! Click if you dare</th>
+                    <th>My name is</th>
+                    <th>Advice</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat=
+                        "item in todo.items">
+                    <td>
+                        <img src="/images/sam-jackson.jpg" ng-hide=item.image!=3 ng-click="samYell()" alt="failed" width=160 length=160>
+                        <img src="/images/rocky.jpg" ng-hide=item.image!=2 ng-click="rockyYell()" alt="failed" width=160 length=160>
+                        <img src="/images/images.jpg" ng-hide=item.image!=1 ng-click="morganYell()" alt="failed" width=160 length=160>
+                        <img src="/images/samuel-jackson.jpg" ng-hide=item.image!=4 ng-click="samYell()" alt="failed" width=160 length=160>
+                        <img src="/images/rocky1.jpg" ng-hide=item.image!=5 ng-click="rockyYell()" alt="failed" width=160 length=160>
+                        <img src="/images/morgan.jpg" ng-hide=item.image!=6 ng-click="morganYell()" alt="failed" width=160 length=160>
+                        <img src="/images/NExUmTtbPVqVBF_1_1.jpg" ng-hide=item.image!=7 ng-click="samYell()" alt="failed" width=160 length=160>
+                        <img src="/images/Rocky_balboa.jpeg" ng-hide=item.image!=8 ng-click="rockyYell()" alt="failed" width=160 length=160>
+                        <img src="/images/MorganFreeman.jpg" ng-hide=item.image!=9 ng-click="morganYell()" alt="failed" width=160 length=160>
+                    </td>
+                    <td>{{item.id}}</td>
+                    <td>{{item.say}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="btn-group btn-group-justified">
+              <div class="btn-group">
+                     <button type="button" class="btn btn-default" ng-click="morganGet()">Morgan Freeman</button>
+             </div>
+              <div class="btn-group">
+                    <button type="button" class="btn btn-default" ng-click="rockyGet()">Rocky</button>
+              </div>
+             <div class="btn-group">
+                 <button type="button" class="btn btn-default" ng-click="samuelGet()">Samuel Jackson</button>
+             </div>
+        </div>
+
+            <div class="btn-group">
+                <span>
+                <p>                               </p>
+                 <button type="button" class="btn btn-default" ng-click="samuelGet()">Snooze</button>
+                </span>
+             </div>
+
+    </div>
+ </div>
+</body>
+</html>
